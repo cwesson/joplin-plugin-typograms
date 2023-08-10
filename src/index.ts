@@ -1,8 +1,20 @@
 import joplin from 'api';
+import { ContentScriptType } from 'api/types'
+
+const Config = {
+	MarkdownFenceId: 'typogram',
+}
+const Templates = {
+	Fence: '```typogram\n\n```',
+}
 
 joplin.plugins.register({
 	onStart: async function() {
-		// eslint-disable-next-line no-console
-		console.info('Hello world. Test plugin started!');
+		// Content Scripts
+		await joplin.contentScripts.register(
+			ContentScriptType.MarkdownItPlugin,
+			Config.MarkdownFenceId,
+			'./contentScript.js',
+		)
 	},
 });

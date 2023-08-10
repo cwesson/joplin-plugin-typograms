@@ -1,7 +1,7 @@
 {
 	"manifest_version": 1,
 	"id": "net.cwesson.joplin-plugin-typograms",
-	"app_min_version": "2.12",
+	"app_min_version": "2.11",
 	"version": "1.0.0",
 	"name": "Typograms",
 	"description": "Render Typogram diagrams inside your Joplin notes.",
