@@ -1,5 +1,6 @@
 {
 	"extraScripts": [
-		"contentScript.ts"
+		"contentScript.ts",
+		"typograms/src/typograms.js"
 	]
 }

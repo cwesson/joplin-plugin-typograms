@@ -1,4 +1,5 @@
 import * as MarkdownIt from "markdown-it";
+const typograms = require("./typograms/src/typograms.js");
 
 export default function(context) {
 	return {
@@ -11,11 +12,11 @@ export default function(context) {
 				const token = tokens[idx];
 				if (token.info != 'typogram') return defaultRender(tokens, idx, options, env, self);
 
+				const diagram = typograms(`\n${token.content}`, 0.3, false);
+				console.log(diagram.outerHTML)
 				return `
 				<div class="typogram-container">
-					Typograms!<br/>
-					${token.content}<br/>
-					Typograms!
+					${diagram.outerHTML}
 				</div>
 				`;
 			}

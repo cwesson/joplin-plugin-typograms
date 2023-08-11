@@ -1,5 +1,13 @@
-# Joplin Plugin
+# Joplin Plugin Typograms
+This plugin allows you to create Typogram diagram using the notation defined in https://google.github.io/typograms/.
 
-This is your new Joplin plugin. It is suggested that you use this README file to document your plugin.
+## Markdown Syntax
+Example syntax:
 
-For information on how to build or publish the plugin, please see [GENERATOR_DOC.md](./GENERATOR_DOC.md)
+    ```typogram
+    .-->
+    +---.--#
+    |   |
+    o---'
+    ```
+

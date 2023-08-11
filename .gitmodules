@@ -1,0 +1,3 @@
+[submodule "src/typograms"]
+	path = src/typograms
+	url = https://github.com/google/typograms.git
