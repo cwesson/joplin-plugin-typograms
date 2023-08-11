@@ -5,9 +5,13 @@ This plugin allows you to create Typogram diagram using the notation defined in 
 Example syntax:
 
     ```typogram
-    .-->
-    +---.--#
-    |   |
-    o---'
+              +----+     o    |          o       *      *   .----------.
+      *-+---. '-* -+-    |    v         ^         \    /    |.--------.|
+        |   '--->   +----+  ->*<-      /   .-+->*<-o--+     |'------> ||
+      <-'       *---+     |<----->|   +----' |  ^   \       '---------'|
+                                             |__|    v      *----------'
     ```
+
+Produces:
+![Example](./doc/example.png)
 
