@@ -10,12 +10,12 @@ export default function(context) {
 
 			markdownIt.renderer.rules.fence = function(tokens, idx, options, env, self) {
 				const token = tokens[idx];
-				if (token.info != 'typogram') return defaultRender(tokens, idx, options, env, self);
+				if (token.info != 'typogram' && token.info != 'typograms') return defaultRender(tokens, idx, options, env, self);
 
 				const diagram = typograms(`\n${token.content}`, 0.3, false);
-				console.log(diagram.outerHTML)
+				//console.log(diagram.outerHTML)
 				return `
-				<div class="typogram-container">
+				<div class="typogram-container" style="background-color:white">
 					${diagram.outerHTML}
 				</div>
 				`;
