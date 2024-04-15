@@ -1,5 +1,5 @@
 # Joplin Plugin Typograms
-This plugin allows you to create Typogram diagram using the notation defined in https://google.github.io/typograms/.
+This plugin allows you to create Typogram diagrams using the notation defined in https://google.github.io/typograms/.
 
 ## Installation
 
@@ -25,4 +25,11 @@ Example syntax:
 Produces:
 
 ![Example](./doc/example.png)
+
+## Building
+The plugin may be built with:
+```
+npm run dist
+```
+This will generated a jpl file in the publish directory.
 

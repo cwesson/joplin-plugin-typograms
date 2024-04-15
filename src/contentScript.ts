@@ -14,8 +14,23 @@ export default function(context) {
 
 				const diagram = typograms(`\n${token.content}`, 0.3, false);
 				//console.log(diagram.outerHTML)
+
+				// Rich text editor support:
+				// The joplin-editable and joplin-source CSS classes mark the generated div
+				// as a region that needs special processing when converting back to markdown.
+				// This element helps Joplin reconstruct the original markdown.
+				const richTextEditorMetadata = `
+					<pre
+						class="joplin-source"
+						data-joplin-language="typogram"
+						data-joplin-source-open="\`\`\`typogram\n"
+						data-joplin-source-close="\`\`\`"
+					>${markdownIt.utils.escapeHtml(token.content)}</pre>
+				`;
+
 				return `
-				<div class="typogram-container" style="background-color:white">
+				<div class="typogram-container joplin-editable" style="background-color:white">
+					${richTextEditorMetadata}
 					${diagram.outerHTML}
 				</div>
 				`;
