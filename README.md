@@ -31,5 +31,5 @@ The plugin may be built with:
 ```
 npm run dist
 ```
-This will generated a jpl file in the publish directory.
+This will generate a jpl file in the publish directory.
 
