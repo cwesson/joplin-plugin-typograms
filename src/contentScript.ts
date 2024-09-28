@@ -29,9 +29,11 @@ export default function(context) {
 				`;
 
 				return `
-				<div class="typogram-container joplin-editable" style="background-color:white">
+				<div class="joplin-editable">
 					${richTextEditorMetadata}
-					${diagram.outerHTML}
+					<div class="typogram-container" style="background-color:white">
+						${diagram.outerHTML}
+					</div>
 				</div>
 				`;
 			}
